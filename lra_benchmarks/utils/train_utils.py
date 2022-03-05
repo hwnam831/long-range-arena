@@ -18,6 +18,7 @@ from flax.training import common_utils
 import jax.numpy as jnp
 from lra_benchmarks.models.bigbird import bigbird
 from lra_benchmarks.models.linear_transformer import linear_transformer
+from lra_benchmarks.models.nam import nam_transformer
 from lra_benchmarks.models.linformer import linformer
 from lra_benchmarks.models.local import local
 from lra_benchmarks.models.longformer import longformer
@@ -69,6 +70,9 @@ def get_model(model_type, create_model_fn, model_kwargs, *create_model_args):
                            model_kwargs, *create_model_args)
   elif model_type == 'linear_transformer':
     return create_model_fn(linear_transformer.LinearTransformerEncoder,
+                           model_kwargs, *create_model_args)
+  elif model_type == 'nam_transformer':
+    return create_model_fn(nam_transformer.NAMTransformerEncoder,
                            model_kwargs, *create_model_args)
   elif model_type == 'sparse_transformer':
     model_kwargs['attention_patterns'] = [
