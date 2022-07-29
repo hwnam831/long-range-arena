@@ -18,7 +18,7 @@ import tensorflow.compat.v1 as tf
 import tensorflow_datasets as tfds
 
 AUTOTUNE = tf.data.experimental.AUTOTUNE
-
+_PATHFINER_TFDS_PATH='/lra/lra_release/lra_release/pathfinder32'
 
 
 def get_mnist_datasets(n_devices, batch_size=256, normalize=False):

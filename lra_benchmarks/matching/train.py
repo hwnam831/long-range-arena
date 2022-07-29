@@ -55,7 +55,7 @@ flags.DEFINE_bool(
     'test_only', default=False, help='Run the evaluation on the test data.')
 
 
-def create_model(flax_module, model_kwargs, key, input1_shape, input2_shape):
+def create_model(flax_module, model_kwargs, key, input1_shape):
   """Creates and initializes the model."""
 
   @functools.partial(jax.jit, backend='cpu')
@@ -63,8 +63,7 @@ def create_model(flax_module, model_kwargs, key, input1_shape, input2_shape):
     module = flax_module.partial(**model_kwargs)
     with nn.stochastic(key):
       _, initial_params = module.init_by_shape(key,
-                                               [(input1_shape, jnp.float32),
-                                                (input2_shape, jnp.float32)])
+                                               [(input1_shape, jnp.float32)])
       model = nn.Model(module, initial_params)
     return model
 

@@ -20,12 +20,12 @@ import ml_collections
 def get_config():
   """Get the default hyperparameter configuration."""
   config = ml_collections.ConfigDict()
-  config.batch_size = 32
-  config.eval_frequency = 100
-  config.num_train_steps = 5000
+  config.batch_size = 3
+  config.eval_frequency = 1000
+  config.num_train_steps = 50000
   config.num_eval_steps = -1
   config.learning_rate = 0.05
-  config.weight_decay = 1e-1
+  config.weight_decay = 1e-2
   config.max_target_length = 200  # ignored
   config.max_eval_target_length = 200  # ignored
   config.sampling_temperature = 0.6

@@ -18,7 +18,7 @@ import os
 import tensorflow as tf
 import tensorflow_datasets as tfds
 
-
+ORIGINAL_DATA_DIR_32='/lra/lra_release/lra_release/pathfinder32'
 
 class Pathfinder32(tfds.core.BeamBasedBuilder):
   """Pathfinder TFDS builder (where the resolution is 32).

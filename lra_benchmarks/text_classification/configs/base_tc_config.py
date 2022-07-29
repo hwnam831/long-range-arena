@@ -20,12 +20,12 @@ import ml_collections
 def get_config():
   """Get the default hyperparameter configuration."""
   config = ml_collections.ConfigDict()
-  config.batch_size = 32
-  config.eval_frequency = 100
-  config.num_train_steps = 20000
+  config.batch_size = 3
+  config.eval_frequency = 2000
+  config.num_train_steps = 240000
   config.num_eval_steps = -1
   config.learning_rate = 0.05
-  config.weight_decay = 1e-1
+  config.weight_decay = 1e-2
   config.max_target_length = 200
   config.max_eval_target_length = 200
   config.sampling_temperature = 0.6
@@ -33,11 +33,11 @@ def get_config():
   config.max_predict_token_length = 50
   config.save_checkpoints = True
   config.restore_checkpoints = True
-  config.checkpoint_freq = 10000
+  config.checkpoint_freq = 60000
   config.random_seed = 0
   config.prompt = ""
   config.factors = "constant * linear_warmup * rsqrt_decay"
-  config.warmup = 8000
+  config.warmup = 80000
   config.classifier_pool = "CLS"
 
   config.max_length = 1000

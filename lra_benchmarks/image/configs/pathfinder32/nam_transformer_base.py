@@ -19,7 +19,7 @@ from lra_benchmarks.image.configs.pathfinder32 import base_pathfinder32_config
 def get_config():
   """Get the hyperparameter configuration."""
   config = base_pathfinder32_config.get_config()
-  config.model_type = "linear_transformer"
+  config.model_type = "nam_transformer"
 
   config.model.num_layers = 4
   config.model.num_heads = 4
