@@ -2,4 +2,4 @@ XLA_PYTHON_CLIENT_PREALLOCATE=false XLA_PYTHON_CLIENT_ALLOCATOR=platform PYTHONP
       --config=lra_benchmarks/listops/configs/$1_base.py \
       --model_dir=/tmp/listops/$1 \
       --task_name=basic \
-      --data_dir=/lra/lra_release/listops-1000/
+      --data_dir=/dataset/listops-1000/
