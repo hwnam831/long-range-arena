@@ -25,7 +25,7 @@ flags.DEFINE_string('vocab_file_path', '/tmp/lra_data/aan',
                     'Path for vocab file output.')
 
 FLAGS = flags.FLAGS
-DATASET_PATHS = '/tmp/dataset'
+DATASET_PATHS = '/lra/lra_release/lra_release/tsv_data/new_aan_pairs'
 
 
 def whitespace_tokenize(text):
