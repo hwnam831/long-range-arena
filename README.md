@@ -4,11 +4,10 @@ This repositoriy is a forked version of google-reasearch/long-range-arena to ben
 
 ### Requirements
 
-- CUDA 11.2 compatible GPU with more than 9GB VRAM (Tested on RTX 3080 10GB).
-- Linux system with nvidia-driver/nvidia-docker installed.
+- CUDA 11 compatible GPU with more than 9GB VRAM (Tested on RTX 3080 10GB).
+- Linux system with nvidia-driver and nvidia-docker installed.
 
 ### Docker and Dataset Setup
-
 
 Pull the tensorflow-2.7.0 image `docker pull tensorflow/tensorflow:2.7.0-gpu`.
 
