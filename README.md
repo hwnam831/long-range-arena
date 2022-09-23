@@ -19,8 +19,14 @@ Start the docker container while attaching this repository to `/lra` and the dat
 Go to `/lra` and install requirements py `pip install -r requirements.txt`.  
 Install jaxlib by running `jaxlibinstall.sh`.  
 
-### Dataset Setup
+### ListOps, Text Classification, and Pixel-level Image Classification
 
+The tasks can run without any modification.  
+Use pre-defined scripts to run them.  
+- Ex1) Image classification with Transformer: `./cifar10 transformer`
+- Ex2) ListOps with NAM Transformer: `./cifar10 nam_transformer`
+- Ex3) Text classification with Linear Transformer: `./cifar10 linear_transformer`
+Only tested with those three, but it is possible to run with others.
 
 ### Document Retrieval
 
