@@ -20,9 +20,9 @@ This repositoriy is a forked version of google-reasearch/long-range-arena to ben
 
 The tasks can run without any modification.  
 Use the pre-defined scripts to run them.  
-- Ex1) Image classification with Transformer: `./cifar10 transformer`
-- Ex2) ListOps with NAM Transformer: `./cifar10 nam_transformer`
-- Ex3) Text classification with Linear Transformer: `./cifar10 linear_transformer`  
+- Ex1) Image classification with Transformer: `./cifar10.sh transformer`
+- Ex2) ListOps with NAM Transformer: `./listops.sh nam_transformer`
+- Ex3) Text classification with Linear Transformer: `./text_classification.sh linear_transformer`  
 
 Only tested with those three transformers, but it is possible to run with others.
 
